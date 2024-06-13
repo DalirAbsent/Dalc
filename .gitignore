@@ -1,4 +1,4 @@
-*.txt
+dalc_history.txt
 dalc-lab.py
 __pycache__
 .idea/
