@@ -1,0 +1,7 @@
+*.txt
+dalc-lab.py
+__pycache__
+.idea/
+.venv/
+_core/*.txt
+_core/__pycache__
