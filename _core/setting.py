@@ -2,7 +2,7 @@ from os import name, path
 
 
 # The program version
-version: str = "1.0.0"
+version: str = "1.0"
 
 
 # The program situation
