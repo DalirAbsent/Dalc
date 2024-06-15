@@ -1,4 +1,4 @@
-from os import name, path
+from os import path
 
 
 # The program version
@@ -10,10 +10,6 @@ running: bool = True
 
 # CSS status
 css_status: bool = True
-
-
-# OS name
-os_name: str = name
 
 
 # Checks if a file exists
