@@ -130,20 +130,12 @@ def __from_file__(path: str) -> map:
     return calculates
 
 
-def __help__(func):
-    """
-    Shows the help for `func`
-    """
-    result = stdout(help, (func,))
-    return result
-
-
-def __print__(data):
+def __print__(*data):
     """
     Prints the computed `data` if you use `print` command.
     """
-    result = stdout(print, (data,))
-    return result
+    result = stdout(print, data)
+    return result.strip()
 
 
 meta_actions: dict = {
@@ -153,8 +145,8 @@ meta_actions: dict = {
                       }
 
 additional_funcs: dict = {
-                        "help": __help__, "read": __from_file__,
-                        "print": __print__, "view": view, "write": write
+                        "read": __from_file__, "print": __print__,
+                        "view": view, "write": write
                           }
 
 
