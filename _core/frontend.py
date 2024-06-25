@@ -1,5 +1,5 @@
 from types import FunctionType
-from _core.setting import css_status
+from _core.setting import css_status, is_error
 
 
 def user_input() -> str:
@@ -34,18 +34,6 @@ def user_quit_text() -> str:
     text = __css__(constant_text)
 
     return text
-
-
-def is_error(data: str):
-    """
-    Checks is a data an error or not.
-    """
-    error_types = [
-            str(Exception), str(SyntaxError), str(ValueError), str(NameError), str(TypeError),
-            str(LookupError), str(FileNotFoundError), str(ZeroDivisionError)
-                    ]
-
-    return data in error_types
 
 
 def all_texts(text) -> str:
