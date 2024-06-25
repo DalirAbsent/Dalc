@@ -2,34 +2,39 @@ from math import comb, dist, erf, erfc, factorial, gamma, isqrt, lgamma, perm, u
 from statistics import multimode, mode
 from numpy.random import randint, rand, seed
 from numpy import (
-        abs, absolute, add, all, allclose,
-        amax, amin, any, arange, arccos, arccosh, arcsin, arcsinh,
-        arctan, arctan2, arctanh, argmax, argmin, argsort,
-        argwhere, around, array, array_equal, array_equiv,
-        busday_count, busday_offset, busdaycalendar, cbrt, ceil, clip,
-        compress, concatenate, copysign, correlate, cos, cosh,
-        count_nonzero, cumprod, cumsum, deg2rad, degrees,
-        diagonal, divide, divmod, dot, e,
-        empty, empty_like, equal, euler_gamma, exp, exp2, expm1, fabs, floor,
-        floor_divide, fmax, fmin, fmod, format_float_scientific, frexp, fromstring,
-        full, full_like, gcd, geomspace, greater, greater_equal,
-        heaviside, hypot, identity,
-        inf, inner, is_busday, isclose, isfinite, isinf,
-        isnan, isnat, isscalar, lcm, ldexp, less,
-        less_equal, linspace, log, log10, log1p, log2,
-        logaddexp, logaddexp2, logical_and, logical_not, logical_or,
-        logical_xor, matrix, max, mean, median, min, mod, modf, moveaxis, multiply, nan,
-        ndim, negative, nextafter, nonzero,
-        not_equal, ones, ones_like, outer, pi, power, prod, positive, ptp,
-        put, putmask, rad2deg, radians, ravel, remainder, repeat, reshape, resize,
-        rint, roll, rollaxis, round, searchsorted, shape, sign, sin, sinh,
-        size, sort, spacing, sqrt, square, stack, std, subtract, sum, swapaxes, take,
-        tan, tanh, trace, transpose, trunc, var, where, zeros, zeros_like
+        abs, absolute, add, all, allclose, amax, amin, any, arange,
+        arccos, arccosh, arcsin, arcsinh, arctan, arctan2, arctanh,
+        argmax, argmin, argsort, argwhere, around, array, array_equal,
+        array_equiv, busday_count, busday_offset, busdaycalendar, cbrt,
+        ceil, clip, compress, concatenate, copysign, correlate, cos, cosh,
+        count_nonzero, cumprod, cumsum, deg2rad, degrees, diagonal, divide,
+        divmod, dot, e, empty, empty_like, equal, euler_gamma, exp, exp2,
+        expm1, fabs, floor, floor_divide, fmax, fmin, fmod, format_float_scientific,
+        frexp, fromstring, full, full_like, gcd, geomspace, greater, greater_equal,
+        heaviside, hypot, identity, inf, inner, is_busday, isclose, isfinite, isinf,
+        isnan, isnat, isscalar, lcm, ldexp, less, less_equal, linspace, log, log10,
+        log1p, log2, logaddexp, logaddexp2, logical_and, logical_not, logical_or,
+        logical_xor, matrix, max, mean, median, min, mod, modf, moveaxis, multiply,
+        nan, ndim, negative, nextafter, nonzero, not_equal, ones, ones_like, outer, pi,
+        power, prod, positive, ptp, put, putmask, rad2deg, radians, ravel, remainder,
+        repeat, reshape, resize, rint, roll, rollaxis, round, searchsorted, shape,
+        sign, sin, sinh, size, sort, spacing, sqrt, square, stack, std, subtract,
+        sum, swapaxes, take, tan, tanh, trace, transpose, trunc, var, where, zeros, zeros_like
         )
 
 
+# Mathematical constants
+constants: dict = {
+                'e': e,
+                'euler_gamma': euler_gamma,
+                'inf': inf,
+                'nan': nan,
+                'pi': pi
+                }
+
+
 # Mathematical functions
-operations: dict = {
+functions: dict = {
                 'abs': abs,
                 'absolute': absolute,
                 'add': add,
@@ -77,13 +82,11 @@ operations: dict = {
                 'divide': divide,
                 'divmod': divmod,
                 'dot': dot,
-                'e': e,
                 'empty': empty,
                 'empty_like': empty_like,
                 'equal': equal,
                 'erf': erf,
                 'erfc': erfc,
-                'euler_gamma': euler_gamma,
                 'exp': exp,
                 'exp2': exp2,
                 'expm1': expm1,
@@ -107,7 +110,6 @@ operations: dict = {
                 'heaviside': heaviside,
                 'hypot': hypot,
                 'identity': identity,
-                'inf': inf,
                 'inner': inner,
                 'is_busday': is_busday,
                 'isclose': isclose,
@@ -144,7 +146,6 @@ operations: dict = {
                 'moveaxis': moveaxis,
                 'multimode': multimode,
                 'multiply': multiply,
-                'nan': nan,
                 'ndim': ndim,
                 'negative': negative,
                 'nextafter': nextafter,
@@ -154,7 +155,6 @@ operations: dict = {
                 'ones_like': ones_like,
                 'outer': outer,
                 'perm': perm,
-                'pi': pi,
                 'positive': positive,
                 'power': power,
                 'prod': prod,
@@ -202,3 +202,6 @@ operations: dict = {
                 'zeros': zeros,
                 'zeros_like': zeros_like,
                 }
+
+
+operations: dict = {**constants, **functions}
