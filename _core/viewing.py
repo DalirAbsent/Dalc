@@ -9,14 +9,17 @@ def view(data):
     If `data` is an existing file shows the file, otherwise
     computed it in `_core.processing` module and then shows it.
     """
+
+    if data is None:
+        return None
+    
     def viewer():
 
-        if is_path_exists(str(data)):
+        if type(data) is str and is_path_exists(data):
             system(f"{file_viewer_command} {data}")
 
         else:
             answer = shaping(data)
-
             system(f"{print_input_command} '{answer}' | {file_viewer_command}")
 
     return viewer
