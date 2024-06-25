@@ -1,7 +1,6 @@
 import re
-from _core.setting import version
+from _core.setting import version, is_error
 from _core.manage_stdout import stdout
-from _core.frontend import is_error
 from _core.operating import operations
 from _core.meta import clear, cleax, stop, restart
 from _core.history import from_history, show_history, clear_history_file
