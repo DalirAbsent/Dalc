@@ -1,6 +1,6 @@
 import re
-from _core.setting import is_path_exists
-from _core.frontend import is_error, shaping
+from _core.setting import is_path_exists, is_error
+from _core.frontend import shaping
 
 
 def write(data, path):
