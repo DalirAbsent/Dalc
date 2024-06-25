@@ -3,7 +3,7 @@ from _core.setting import is_path_exists
 from _core.frontend import is_error, shaping
 
 
-def write(data, path) -> None:
+def write(data, path):
     """
     If `path` is an existing file, writes the data in it, otherwise
     creates the file and then writes the data in it.
