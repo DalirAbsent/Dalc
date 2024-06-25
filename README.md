@@ -2,7 +2,7 @@
 ### A terminal-base calculator
 
 Abilities:
-* Many mathematical functions and constants like factorial, sinus, pi, e
+* Many mathematical constants and functions like factorial, sinus, pi, e
 * Creating personal functions
 * Creating variables
 * Creating arrays and matrices
@@ -17,8 +17,16 @@ Abilities:
 
 #### Mathematical functions and constants:
 
-To include mathematical functions, constants and arrays, Dalc uses "numpy" module for most of them and for a few functions uses "math" and "statistics" modules
-This functions and constants are:
+To include mathematical functions, constants and arrays, Dalc uses "numpy" module for most of them and for a few functions uses "math" and "statistics" modules.
+
+The constants are:
+* e
+* euler_gamma
+* inf
+* nan
+* pi
+
+The functions are:
 * abs
 * absolute
 * add
@@ -66,13 +74,11 @@ This functions and constants are:
 * divide
 * divmod
 * dot
-* e
 * empty
 * empty_like
 * equal
 * erf
 * erfc
-* euler_gamma
 * exp
 * exp2
 * expm1
@@ -96,7 +102,6 @@ This functions and constants are:
 * heaviside
 * hypot
 * identity
-* inf
 * inner
 * is_busday
 * isclose
@@ -133,7 +138,6 @@ This functions and constants are:
 * moveaxis
 * multimode
 * multiply
-* nan
 * ndim
 * negative
 * nextafter
@@ -143,7 +147,6 @@ This functions and constants are:
 * ones_like
 * outer
 * perm
-* pi
 * positive
 * power
 * prod
@@ -191,7 +194,7 @@ This functions and constants are:
 * zeros
 * zeros_like
 
-You can use the `help` function to know how to use them. e.g. `help(factorial)`, `help(gamma)`
+You can use the `help` function to know how to use the functions. e.g. `help(factorial)`, `help(gamma)`
 
 
 #### Creating personal functions:
@@ -205,7 +208,7 @@ And to use your functions do this:\
 e.g. `a(3)`, `b(7, 12)`
 
 Note:
-* To use your functions, the number of your inputs must match the number of your function inputs. (in the examples ebove, `a` has one input and `b` has two inputs)
+* To use your functions, the number of your inputs must match the number of your function inputs. (in the examples above, `a` has one input and `b` has two inputs)
 * To create several functions, the number of functions must be one (so all of your variables have the same function) or equal to number of variables (so all of your variables have their corresponding function).
 This raise an error: `a = lambda x: x+6, lambda y: sin(y)`, `x, y, z = lambda a: a*5, lambda b: b *5 +6`
 * Your function names can only include lowercase and uppercase english letters, numbers and underscore("_"). And can't be started with numbers.
@@ -269,7 +272,7 @@ e.g. `help(tan)`, `help(matrix)`, `help(view)`
 
 #### Meta commands:
 
-This commands are for:\
+These commands are for:\
 `clear` ->     Clears the screen.\
 `exit`, `quit` ->     Prints the user exit text, then exits the program.\
 `restart`, `reboot`, `reset` -> Restarts the program.\
@@ -286,5 +289,5 @@ e.g. `!25` (This command run the 25th records of the history)\
 (With `history` command you can see your history)
 
 Note:
-* By runnig the program, a file is created as the history file. ("dalc_history.txt")
+* By running the program, a file is created as the history file. ("dalc_history")
 
