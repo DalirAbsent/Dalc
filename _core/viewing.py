@@ -10,9 +10,6 @@ def view(data):
     computed it in `_core.processing` module and then shows it.
     """
 
-    if data is None:
-        return None
-    
     def viewer():
 
         if type(data) is str and is_path_exists(data):
