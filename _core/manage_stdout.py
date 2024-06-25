@@ -10,5 +10,5 @@ def stdout(func, func_input: tuple):
     func(*func_input)
     result = sys.stdout.getvalue()
     sys.stdout = sys.__stdout__
-
+    
     return result
