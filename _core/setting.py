@@ -24,7 +24,7 @@ print_input_command: str = "echo"
 file_viewer_command: str = "less"
 
 # History file path
-history_path: str = "dalc_history.txt"
+history_path: str = "dalc_history"
 
 # Creates the history file if it doesn't exist
 if not is_path_exists(history_path):
