@@ -3,6 +3,7 @@ from _core.setting import running
 from _core.receiving import receive
 from _core.responding import response
 from _core.history import recording
+from _core.gathering import gather
 
 
 def main() -> None:
@@ -19,6 +20,11 @@ def main() -> None:
     result = response(data)
     if result is not None:
         print(result)
+
+
+if gather():
+    print(gather())
+    running = False
 
 
 if __name__ == "__main__":
