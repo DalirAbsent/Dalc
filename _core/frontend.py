@@ -6,7 +6,7 @@ def user_input() -> str:
     """
     Returns the user's input text.
     """
-    constant_text = __texts__("user_input")
+    constant_text = all_texts("user_input")
     text = __css__(constant_text, 33)
 
     return text
@@ -16,25 +16,21 @@ def shaping(result):
     """
     Specifies type of the data to pass it to the
     appropriate function and then returns the result.
-    if the data is `None` returns `None`.
     """
-    if result is None:
-        return None
     
-    elif type(result) is map:
+    if type(result) is map:
         answer = __file_output__(result)
         return answer
     
-    else:
-        answer = __user_output__(str(result))
-        return answer
+    answer = __user_output__(str(result))
+    return answer
     
 
 def user_quit_text() -> str:
     """
     User text on exit.
     """
-    constant_text = __texts__("quit_text")
+    constant_text = all_texts("quit_text")
     text = __css__(constant_text)
 
     return text
@@ -52,7 +48,7 @@ def is_error(data: str):
     return data in error_types
 
 
-def __texts__(text) -> str:
+def all_texts(text) -> str:
     """
     All texts
     """
@@ -104,12 +100,12 @@ def __user_output__(data: str) -> str:
     Gets a text data and prepares it to print according to the data type.
     If the data is error, it is different from the non-error data.
     """
-    constant_text = __texts__("user_output")
+    constant_text = all_texts("user_output")
 
     if is_error(data):
         text = __css__(constant_text, 31)
-        constant_error_text = __texts__("constant_error_text")
-        error_text = __texts__(data)
+        constant_error_text = all_texts("constant_error_text")
+        error_text = all_texts(data)
         data = constant_error_text + error_text
     
     else:
@@ -137,6 +133,10 @@ def __file_output__(data: map) -> str:
             calculate()
             continue
         
+        if calculate is None:
+            answer += user_input() + equation
+            continue
+
         input_text = user_input() + equation
         output_text = __user_output__(str(calculate)) + "\n"
 
