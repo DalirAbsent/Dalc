@@ -2,7 +2,7 @@ from os import path
 
 
 # The program version
-version: str = "1.0"
+version: str = "1.1"
 
 
 # The program situation
@@ -37,3 +37,15 @@ history_size: int = 100
 
 # Clear command to clear the screen
 clear_command: str = "clear"
+
+
+def is_error(data):
+    """
+    Checks is a data an error or not.
+    """
+    error_types = [
+            str(Exception), str(SyntaxError), str(ValueError), str(NameError), str(TypeError),
+            str(LookupError), str(FileNotFoundError), str(ZeroDivisionError)
+                    ]
+
+    return str(data) in error_types
