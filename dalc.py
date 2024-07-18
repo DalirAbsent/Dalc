@@ -23,7 +23,7 @@ def main() -> None:
 
 
 cli_gather = gather()
-if cli_gather:
+if cli_gather is not None:
     print(cli_gather)
     running = False
 
